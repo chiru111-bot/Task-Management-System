@@ -1,223 +1,131 @@
-# **Task Management Application**
+# Task Management System
 
-This is a Task Management Application built with a MERN stack. The front end is developed using React with Vite, and the back-end is built using Express.js with MongoDB for the database.
+**A Full-Stack Web Application using MERN Stack**
 
----
+## 1. Project Overview
 
-<p align="center">
-  <b style="color: blue;  ">Visitor count</b>
-  <br>
-  <a style="" href="https://github.com/akashdeep023">
-  <img src="https://profile-counter.glitch.me/task-management/count.svg" />
-  </a>
-</p>
+The Task Management System is a web-based application developed to help users organize, manage and track their daily tasks efficiently.
 
-## 📜 Project Overview
+The application provides a centralized platform where users can create tasks, update task details, monitor progress and manage their work in an organized manner.
 
-_A task management app, where users can organize their personal and team-based tasks, track progress, and share task updates. Users can manage their task boards with features to create, edit, assign, and delete tasks for themselves and other members._
+This project uses the MERN Stack (MongoDB, Express.js, React.js and Node.js) to provide a responsive and efficient web application.
 
-<p align="center">Register Page</p>
-<a style="" href="https://task-management-org.vercel.app/login">
-     
-![Macbook-Air-localhost (1)](https://github.com/user-attachments/assets/d05bd3e9-e349-469b-a4d2-d828e3e76414)
+## 2. Objectives
 
-</a>
-<p align="center">Dashboard Page</p>
-<a style="" href="https://task-management-org.vercel.app/">
-     
-![Macbook-Air-localhost](https://github.com/user-attachments/assets/5643d5a6-b8ad-4516-a3dd-d12b0d9793e3)
+- Develop an easy-to-use task management platform.
+- Allow users to create and manage tasks.
+- Improve productivity through task organization.
+- Track task progress and completion.
+- Provide a user-friendly interface.
+- Store and retrieve task information using MongoDB.
 
-</a>
-<p align="center">Public View</p>
-<a style="" href="https://task-management-org.vercel.app/task/67421bb3a90e252d2d4cb42e">
-     
-![Macbook-Air-localhost (2)](https://github.com/user-attachments/assets/cde4fcb3-80c4-410d-9763-50281c9b2233)
+## 3. Technologies Used
 
-</a>
+| Technology | Purpose |
+|---|---|
+| React.js | Frontend development |
+| Vite | Development and build tool |
+| Node.js | Backend runtime |
+| Express.js | Backend API development |
+| MongoDB | Database management |
+| Mongoose | Database connectivity |
+| JavaScript | Application logic |
+| Tailwind CSS | User interface styling |
 
-## **Table of Contents**
+## 4. Main Features
 
--   [Features](#features)
--   [Tech Stack](#tech-stack)
--   [Setup Instructions](#setup-instructions)
--   [Scripts](#scripts)
--   [Live Demo](#live-demo)
--   [Author](#author)
--   [License](#license)
+- Task creation and management.
+- Edit and delete existing tasks.
+- Task status management.
+- User-friendly dashboard.
+- Database integration.
+- Responsive user interface.
 
----
+*Note: Include only features that are implemented in your version.*
 
-## **Features**
+## 5. Project Structure
 
--   User authentication using JWT.
--   Secure password handling with bcrypt.js.
--   State management with Redux Toolkit.
--   User-friendly interface and Only public page Responsive.
--   Toast notifications for feedback.
--   RESTful APIs for seamless communication between frontend and backend.
+```text
+Task-Management-System/
+│
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── LICENSE
+└── README.md
+```
 
-### **Core Functionalities**
+## 6. Installation and Setup
 
--   **User Authentication:**
+### Prerequisites
 
-    -   Users can register and log in.
-    -   Only authenticated users can create and manage tasks.
+- Node.js
+- npm
+- MongoDB
 
--   **Task Management:**
+### Clone the Repository
 
-    -   Create tasks with properties like priority, optional due dates, categories, and the ability to share tasks with others (read-only public access for shared tasks).
-    -   Update tasks, including title, priority, and due dates.
-    -   Delete tasks.
-    -   Change task statuses across four categories: **Backlog**, **To-Do**, **In-Progress**, and **Done**.
-    -   Automatically highlight overdue tasks with red and completed tasks with green.
+```bash
+git clone https://github.com/chiru111-bot/Task-Management-System.git
+cd Task-Management-System
+```
 
--   **User Management:**
+### Backend Setup
 
-    -   Users can update their name, email, or password via the settings page.
-    -   Changes to email or password will log users out to ensure security.
+```bash
+cd backend
+npm install
+npm start
+```
 
--   **Analytics & Filtering:**
+### Frontend Setup
 
-    -   Review task analytics in a dedicated section.
-    -   Filter tasks by **Today**, **This Week**, or **This Month** (default is the current week).
+Open another terminal:
 
--   **User-Friendly Interface:**
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-    -   Task titles are truncated on the board for readability, with full titles accessible via tooltips.
-    -   Mandatory fields are marked with a red asterisk (\*).
-    -   Notifications and alerts are provided via toast messages.
+Configure the MongoDB connection and environment variables according to the backend configuration before starting the application.
 
--   **Collaboration:**
-    -   Add members to task boards.
-    -   Assign members to tasks during creation.
+## 7. Application Workflow
 
-### **Additional Features**
+1. The user opens the Task Management application.
+2. The user interacts with the dashboard.
+3. Tasks can be created, updated or deleted.
+4. The backend processes the user requests.
+5. MongoDB stores the task information.
+6. Updated task information is displayed on the frontend.
 
--   Visual indicators for task statuses based on due dates:
-    -   **Red**: Overdue tasks in active categories.
-    -   **Green**: Tasks marked as done.
--   Pre-filled user information for seamless updates on the settings page.
+## 8. Future Enhancements
 
-## 🛠️ **Tech Stack**
+- Task deadline notifications.
+- Priority-based task management.
+- Calendar integration.
+- Team collaboration.
+- Advanced task analytics.
+- Mobile application support.
 
-### **Frontend**
+## 9. Conclusion
 
--   **React**: UI library.
--   **React Router DOM**: For routing.
--   **Redux Toolkit**: State management.
--   **React Icons**: Icon library.
--   **React Toastify**: Notification handling.
--   **Vite**: Frontend build tool.
--   **Eslint**: Code quality and linting.
+The Task Management System provides an organized approach to managing daily activities and tasks.
 
-### **Backend**
+By integrating React.js, Node.js, Express.js and MongoDB, the project demonstrates the practical implementation of full-stack web development concepts.
 
--   **Express.js**: Backend framework.
--   **Mongoose**: MongoDB object modeling.
--   **JWT**: Secure token-based authentication.
--   **Bcrypt.js**: Password encryption.
--   **Dotenv**: Environment variable management.
--   **Cors**: Cross-origin resource sharing.
+## 10. Project Credits
 
----
+This project is based on an existing open-source implementation and has been used as a learning foundation. Original contributors and licensing information are acknowledged in the repository's LICENSE file.
 
-## **Setup Instructions**
-
-### **Prerequisites**
-
--   Install **Node.js (18.17.1)**.
--   Install **npm** or **yarn**.
--   MongoDB database.
-
-### **Backend Setup**
-
-1. Navigate to the backend directory:
-    ```bash
-    cd backend
-    ```
-2. Install dependencies:
-    ```bash
-    npm install
-    ```
-3. Create a `.env` file in the backend directory and add:
-    ```env
-    MONGODB_URI=mongodb://127.0.0.1:27017/task_management
-    FRONTEND_URL=http://localhost:5173
-    PORT=9000
-    JWT_SECRET=secret-kJKJllKKJJghLjOiUfcHGkMLgdJlLKDtrdyKLBJbRdesEkj
-    ```
-4. Start the server in development mode:
-    ```bash
-    npm run dev
-    ```
-
-### **Frontend Setup**
-
-1. Navigate to the frontend directory:
-    ```bash
-    cd frontend
-    ```
-2. Install dependencies:
-    ```bash
-    npm install
-    ```
-3. Create a `.env` file in the frontend directory and add:
-    ```env
-    VITE_BACKEND_URL=http://localhost:9000
-    VITE_FRONTEND_URL=http://localhost:5173
-    ```
-4. Start the development server:
-    ```bash
-    npm run dev
-    ```
-5. Open the application in your browser at `http://localhost:5173`.
-
----
-
-## **Scripts**
-
-### **Frontend**
-
-| Script            | Description                                 |
-| ----------------- | ------------------------------------------- |
-| `npm run dev`     | Starts the development server.              |
-| `npm run build`   | Builds the production version of the app.   |
-| `npm run lint`    | Lints the codebase for errors and warnings. |
-| `npm run preview` | Previews the built application.             |
-
-### **Backend**
-
-| Script          | Description                                          |
-| --------------- | ---------------------------------------------------- |
-| `npm run start` | Starts the server in production mode.                |
-| `npm run dev`   | Starts the server in development mode using nodemon. |
-
----
-
-## **Live Demo**
-
-Check out the live demo of Task Management here: [Task Management](https://task-management-org.vercel.app)
-
-## **Author**
-
-Akash Deep \
-Email: contact.akashdeep023@gmail.com \
-LinkedIn: https://www.linkedin.com/in/akashdeep023/
-
-## **Contributors**
-
-We'd like to acknowledge the efforts and contributions of the following individuals:
-
--   **[Akash Deep](https://github.com/akashdeep023)** - Full Stack development and Project lead.
--   **[Ekant Verma](https://github.com/ekantverma)** - Full Stack development.
--   **[Anjali Kumari](https://github.com/Anjali17aj)** - Full Stack development.
--   **[Shanedra Singh](https://github.com/shanedraSingh/)** - Full Stack development.
-
-## **License**
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Thank you for checking out my Task Management project! If you have any feedback or suggestions, I would love to hear from you.
-Feel free to contribute, report issues, or suggest improvements! 😊
+Further modifications and improvements should be documented as they are implemented.
